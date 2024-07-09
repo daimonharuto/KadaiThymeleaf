@@ -10,11 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class OutputController {
 
-    @GetMapping("/kadai")
-    public String getKadai(@RequestParam(name = "previous",required = false) String previous, Model model) {
-        model.addAttribute("previous1", previous);
-        return "kadai";
-    }
+    
     
     @PostMapping("/output")
     public String postOutput(@RequestParam("val") String val, Model model) {
